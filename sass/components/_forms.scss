@@ -83,10 +83,16 @@
 
   transition: border $duration $function;
 
-  &t:focus-visible,
+  &:focus-visible,
   &:focus {
     border: 1px solid $accent-color;
     outline: -webkit-focus-ring-color auto 0px;
+  }
+
+  &:hover,
+  &:hover + .icon__modal {
+    fill: $accent-color;
+    border-color: $accent-color;
   }
 }
 
@@ -117,6 +123,10 @@
     border: 1px solid $accent-color;
     outline: -webkit-focus-ring-color auto 0px;
   }
+
+  &:hover {
+    border-color: $accent-color;
+  }
 }
 
 .form__agreement {
@@ -125,4 +135,8 @@
   letter-spacing: 0.03em;
 
   color: $current-text-color;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+  }
 }
